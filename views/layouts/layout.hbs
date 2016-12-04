@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    {{> header }}
+    <div class="container">
+      <div class="row top-row">
+        <div id="upperleftflower" class="flower col-xs-1"></div>
+        <div id="upperrightflower" class="flower col-xs-1 pull-right"></div>
+        <hr />
+      </div>
+      <div class="side-border">
+
+      {{{body}}}
+      
+      </div>
+      <div class="row bottom-row">
+        <div id="lowerleftflower" class="flower col-xs-1"></div>
+        <div id="lowerrightflower" class="flower col-xs-1 pull-right"></div>
+        <div class="bottom-border"></div>
+      </div>
+    </div>
+  </body>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</html>

@@ -1,8 +1,200 @@
+/**FONTS**/
+@font-face {
+  font-family:'Gotham-Thin';
+  src: url('fonts/Gotham-Thin.otf') format("truetype");
+}
+
+@font-face {
+  font-family:'Salsabilla';
+  src: url('fonts/Salsabilla.ttf') format("truetype");
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 10px;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #FFC79A;
+}
+
+.top-row {
+  padding-top: 0px;
+}
+
+.bottom-row {
+  position: relative;
+  bottom: 0;
+}
+
+/**Font and Text**/
+.gotham-thin {
+  font-family: "Gotham-Thin", Arial;
+}
+
+.salsabilla {
+  font-family: "Salsabilla";
+}
+
+.h1-text-size {
+  font-size: 1.5em;
+}
+
+.h3-text-size {
+  font-size: 1.15em;
+}
+
+.h4-text-size {
+  font-size: 0.9em;
+}
+
+.span-text-size {
+  font-size: 14px;
+}
+
+/**Alignment**/
+.center {
+  text-align: center;
+}
+
+/**Padding**/
+.main-content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.padding-bottom-30 {
+  padding-bottom: 20px;
+}
+
+
+.padding-bottom-15 {
+  padding-bottom: 15px;
+}
+
+.padding-top-50 {
+  padding-top: 50px;
+}
+
+.move-up {
+  margin-top: -20px;
+}
+
+/**NAVIGATION**/
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  background-color: #FFC79A;
+}
+
+.nav-pills>li>a:hover {
+  color: #0e007e;
+  background-color: #fff;
+
+}
+
+hr {
+  border-width: : 1px;
+  border-color: #333;
+  padding: 0;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.bottom-border {
+  height: 50px;
+  text-align: center;
+  border-bottom: thin solid #333;
+}
+
+.side-border {
+  border-left: thin solid #333;
+  border-right: thin solid #333;
+}
+
+/**Flower Placement**/
+.flower {
+  width: 65px;
+  height: 65px;
+  background-image: url('../images/upperleftflower.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#upperleftflower {
+}
+
+#upperrightflower {
+  -moz-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
+}
+
+#lowerleftflower {
+  -moz-transform: scaleY(-1);
+   -o-transform: scaleY(-1);
+   -webkit-transform: scaleY(-1);
+   transform: scaleY(-1);
+   filter: FlipV;
+   -ms-filter: "FlipV";
+}
+
+#lowerrightflower {
+  -ms-transform: rotate(180deg); /* IE 9 */
+      -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+      transform: rotate(180deg);
+}
+
+.map {
+  width: inherit;
+  height: inherit;
+}
+
+
+/**MEDIA QUERIES**/
+@media (min-width: 768px) {
+  .nav-container {
+    padding-top: 30px;
+  }
+
+  .top-row {
+    padding-top: 50px;
+  }
+
+  .padding-bottom-30 {
+    padding-bottom: 30px;
+  }
+
+  .flower {
+    width: 121px;
+    height: 121px;
+  }
+
+  hr {
+    margin-top: 25px;
+  }
+
+  .bottom-border {
+    height: 100px;
+  }
+
+  /**Font Size Increase from XS->SM**/
+  .h1-text-size {
+    font-size: 2.5em;
+  }
+
+  .h3-text-size {
+    font-size: 1.3em;
+  }
+
+  .h4-text-size {
+    font-size: 1.2em;
+    padding-bottom: 60px;
+  }
+
+  .span-text-size {
+    font-size: 18px;
+    font-weight: 200;
+  }
 }
