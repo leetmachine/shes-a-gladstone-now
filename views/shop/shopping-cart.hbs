@@ -1,0 +1,60 @@
+{{# if items}}
+
+<div class="row adjust-right">
+  <div class="row">
+    <h1 class="salsabilla padding-bottom-30 move-up h1-text-size ">Cart</h1>
+  </div>
+
+    <div class="col-sm-8 col-md-8 col-md-offset-2 col-sm-offset-2">
+      <div id="charge-error" class="alert alert-danger {{#if noError}}hidden{{/if}}">{{errMsg}}</div>
+
+
+      <ul class="list-group">
+
+        {{# each items}}
+
+        <li class="list-group-item">
+          <div class="row padding-top-10-cart padding-10">
+            <h3 class="salsabilla inline">{{ this.item.title }}</h3>
+              <h4 class="Gotham-thin inline pull-right">Qty: {{ this.qty }}</h4>
+          </div>
+          <div class="row padding-10">
+            <h4 class="salsabilla pull-left">${{this.price}}</h4>
+            <div class="btn-group pull-right margin-bottom-30">
+                <button class="btn btn-default "><a href="/reduce/{{this.item._id}}">Reduce by 1</a></button>
+                <button class="btn btn-default "><a href="/remove/{{this.item._id}}/{{this.qty}}">Remove All</a></button>
+            </div>
+          </div>
+        </li>
+
+        {{/each}}
+
+      </ul>
+    </div>
+  </div>
+  <div class="row padding-top-50">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+      <h2>Total: ${{ totalPrice }}</h2>
+    </div>
+  </div>
+
+  <div class="row padding-top-10">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+      <button id="checkoutButton" type="button" class="btn btn-success">Checkout</button>
+    </div>
+  </div>
+
+{{ else }}
+
+<div class="row">
+  <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+    <h2>Your cart is empty!</h2>
+  </div>
+</div>
+
+{{/if }}
+<script>
+  var totalPrice =  {{ totalPrice}} *100;
+</script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="javascripts/checkout.js"></script>

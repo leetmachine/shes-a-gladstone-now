@@ -1,13 +1,57 @@
-<div class="center">
+<div class=" main-content center adjust-right">
   <div class="row">
-    <h1 class="salsabilla padding-bottom-30 move-up h1-text-size">Registry</h1>
+    <h1 class="salsabilla padding-bottom-30 move-up h1-text-size ">Registry</h1>
   </div>
-  <div class="row main-content">
-    <div class="col-xs-12 col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptatum quisquam unde similique ipsam perferendis laborum fuga, laboriosam, illo harum ea placeat, cum dolorem, adipisci voluptate accusamus nobis consequatur. Ipsa.</p>
+  <div class="row center">
+    <div class="col-xs-12 col-sm-6 vertical-center body-text">
+      <p >It is only fitting they head to the place where it all began- Assaggios! Well not exactly... As you probably know Angelique & Keegan met 8 years ago at Assaggios Italian Restaurant, their place of work. It was a few short years of great friendship before they then fell in love, and well, here we are! Italy and its amazing food has done them right so far so they decided the most romantic country on earth was the perfect destination for their honeymoon or Luna Di Miele!</p>
+      <div class="cursive-break">
+      </div>
+      <p>If you are considering a gift for the newly-weds, please select from the shop below! It is full of awesome parts and pieces of their honeymoon that you can personally become apart of. Each purchase is tied to your email and name, and as we travel from Italy to France we'll know exactly who to thank for our train tickets, champagne, or colosseum tour! Simply select which items you'd like to take care of, and click the cart icon for a secure checkout! </p>
     </div>
-    <div class="col-xs-12 col-sm-8">
+    <br />
+
+    <div class="col-xs-12 col-sm-6">
       <img src="{{{imgpath}}}" class="map"/>
     </div>
   </div>
+  <a name="shop"></a>
+  <div class="row">
+    <div class="col-xs-12 padding-top-10">
+      <img src="{{flowerbanner}}" class="flower-banner"/>
+    </div>
+  </div>
+  <div class="row center padding-top-10 ">
+    <div class="col-xs-10 col-xs-offset-1">
+      <h1 class="salsabilla margin-bottom-30 h1-text-size move-up">Luna di miele!</h1>
+    </div>
+      <a href="/shopping-cart" class="pull-right move-up">
+            <i class="fa fa-shopping-cart fa-3x cart-icon" aria-hidden="true"></i>
+            <p class="">{{ session.cart.totalQty }}</p>
+          </a>
+  </div>
+
+  {{# each items }}
+        <div class="row col-xs-offset-1 col-sm-offset-0 center">
+
+            <!--START ITEM-->
+            {{# each this }}
+              <div class="col-xs-5 col-sm-3 shop-column">
+                <div class="shop-item">
+                  <img src="{{this.imagePath}}" class="shop-item-image"/>
+                  <a href="/add-to-cart/{{this.id}}" class="btn btn-default btn-md btn-margin-left {{#disabled this}}{{/disabled}}" role="button">add</a>
+                  <h3 class="salsabilla">${{this.price}}</h3>
+                  <span class="gotham-thin">qty: {{this.qty}}</span>
+
+                  {{#soldoutDesc this}}{{/soldoutDesc}}
+
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+  {{/each}}
+
+
+
 </div>
