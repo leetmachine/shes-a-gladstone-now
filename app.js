@@ -27,12 +27,6 @@ var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 
 var mongodbUri = 'mongodb://leetmachine:Mxolch846!@ds121980.mlab.com:21980/wedding-website';
 
 mongoose.connect(mongodbUri, options);
-var conn = mongoose.connection;
-
-conn.on('error', console.error.bind(console, 'connection error:'));
-conn.once('open', function() {
-  console.log('db connection successful');
-});
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
