@@ -157,7 +157,7 @@ router.post('/checkout', function(req, res, next){
 
   // Set your secret key: remember to change this to your live secret key in production
   // See your keys here: https://dashboard.stripe.com/account/apikeys
-  var stripe = require("stripe")("sk_test_xYDySwsSBWJiJarLoTY22vIP");
+  var stripe = require("stripe")("sk_live_zySwPZjX4vpNv7jD4Bbq380o");
 
   // Charge the user's card:
   var charge = stripe.charges.create({
