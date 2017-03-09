@@ -15,7 +15,7 @@ router.get('/info', function(req, res, next) {
 
 /*GET info page.*/
 router.get('/us', function(req, res, next) {
-  res.render('us', {active_us: true, usPath: '/images/couple.jpg', waterfallPath: '/images/waterfall.jpg', ringPath: '/images/the-ring.jpg'});
+  res.render('us', {active_us: true, usPath: '/images/couple.jpg', waterfallPath: '/images/waterfall.JPG', ringPath: '/images/the-ring.JPG'});
 });
 
 /* GET registry page */
