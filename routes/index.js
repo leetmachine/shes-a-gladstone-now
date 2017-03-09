@@ -172,7 +172,7 @@ router.post('/checkout', function(req, res, next){
       return res.redirect('shopping-cart');
     }
       req.flash('success', 'Successful Purchase!');
-      req.cart = null;
+      req.session.cart = null;
 
       //change to Thank You page
       res.redirect('/');
