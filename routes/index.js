@@ -5,7 +5,7 @@ var Cart = require('../models/cart');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'She\' a Gladstone!', active_home: true});
+  res.render('index', { title: 'She\'s a Gladstone!', active_home: true});
 });
 
 /*GET info page.*/
