@@ -38,6 +38,7 @@ function addToCart(req, res) {
   var itemId = req.params.id;
   var cart = new Cart(req.session.cart ? req.session.cart : {});
 
+
   Item.findById(itemId, function(err, item) {
     if(err) {
       return res.redirect('/registry');
@@ -151,6 +152,7 @@ router.post('/checkout', function(req, res, next){
     return res.redirect('shop/shopping-cart', {items: null});
   }
   var cart = new Cart(req.session.cart);
+  var cartString = JSON.stringify(cart);
 
   //token.id from front-end checkout.js page
   var token = req.body.token;
@@ -163,7 +165,7 @@ router.post('/checkout', function(req, res, next){
   var charge = stripe.charges.create({
     amount: cart.totalPrice*100,
     currency: "usd",
-    description: cart,
+    description: cartString,
     source: token,
   }, function(err, charge) {
     // asynchronously called
