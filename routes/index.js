@@ -163,7 +163,7 @@ router.post('/checkout', function(req, res, next){
   var charge = stripe.charges.create({
     amount: cart.totalPrice*100,
     currency: "usd",
-    description: "Example charge",
+    description: cart,
     source: token,
   }, function(err, charge) {
     // asynchronously called
