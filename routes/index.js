@@ -18,6 +18,10 @@ router.get('/us', function(req, res, next) {
   res.render('us', {active_us: true, usPath: '/images/couple.jpg', waterfallPath: '/images/waterfall.JPG', ringPath: '/images/the-ring.JPG'});
 });
 
+router.get('/engagement', function(req, res, next) {
+  res.render('engagement', {active_engagement: true});
+});
+
 /* GET registry page */
 router.get('/registry', function(req, res, next) {
   Item.find(function(err, docs) {
@@ -177,10 +181,15 @@ router.post('/checkout', function(req, res, next){
       req.session.cart = null;
 
       //change to Thank You page
-      res.redirect('/');
+      res.redirect('/thank-you');
 
   });
 });
+
+router.get('/thank-you', function(req, res, next) {
+  res.render('shop/thank-you');
+});
+
 
 
 

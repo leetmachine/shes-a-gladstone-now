@@ -239,6 +239,10 @@ hr {
       -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
       transform: rotate(180deg);
 }
+/**ENGAGEMENT PICS**/
+.engagement-pic {
+  
+}
 
 /**INFO PAGE**/
 .info-pic {
