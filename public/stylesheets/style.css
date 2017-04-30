@@ -15,7 +15,12 @@ body {
 }
 
 
+
 p {
+  margin: 10px;
+}
+
+.margins {
   margin: 10px;
 }
 
@@ -239,10 +244,20 @@ hr {
       -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
       transform: rotate(180deg);
 }
-/**ENGAGEMENT PICS**/
-.engagement-pic {
-  
+
+/**.photo-container {
+  min-height: 500px;
+}**/
+
+.modal-content {
+  max-width: 600px;
 }
+
+/**ENGAGEMENT PICS**/
+#modal-image {
+  width:100%;
+}
+
 
 /**INFO PAGE**/
 .info-pic {
