@@ -3,9 +3,9 @@ var photoContainer = document.getElementById('photo-container');
 
 
 var urls = [
- "../images/engagement/hugging.jpg",
- "../images/engagement/walking.jpg",
- "../images/engagement/kissing.jpg",
+ "../images/engagement/hugging.JPG",
+ "../images/engagement/walking.JPG",
+ "../images/engagement/kissing.JPG",
  "../images/engagement/lovinggit.jpg"   
 ]
 
