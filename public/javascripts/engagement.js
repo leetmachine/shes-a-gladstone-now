@@ -3,10 +3,10 @@ var photoContainer = document.getElementById('photo-container');
 
 
 var urls = [
- "../images/engagement/fave1.jpg",
- "../images/engagement/FAVE3.jpg",
- "../images/engagement/fave2.jpg",
- "../images/engagement/betterone.jpg"   
+ "../images/engagement/hugging.jpg",
+ "../images/engagement/walking.jpg",
+ "../images/engagement/kissing.jpg",
+ "../images/engagement/loving.jpg"   
 ]
 
 for(var i in urls) {
