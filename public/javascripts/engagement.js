@@ -6,7 +6,7 @@ var urls = [
  "../images/engagement/hugging.jpg",
  "../images/engagement/walking.jpg",
  "../images/engagement/kissing.jpg",
- "../images/engagement/loving.jpg"   
+ "../images/engagement/lovinggit.jpg"   
 ]
 
 for(var i in urls) {
