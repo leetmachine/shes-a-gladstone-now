@@ -1,9 +1,24 @@
 <div class="center adjust-right">
   <div class="row">
-    <h1 class="salsabilla padding-bottom-30 move-up h1-text-size">Save the date</h1>
-    <h1 class="gotham-thin padding-bottom-30 h1-text-size">ANGELIQUE & KEEGAN</h1>
-    <h3 class="salsabilla padding-bottom-15 h3-text-size">are getting married</h3>
-    <h4 class="salsabilla padding-bottom-15 h4-text-size">May 26th, 2017</h4>
-    <span class="span-text-size">HONOLULU, HAWAII</span>
+    <div class="center video-parent">
+      <div id="cover-div" class="cover-div">
+        <h1 class="salsabilla padding-bottom-30 h1-text-size">Save the date</h1>
+        <h1 class="gotham-thin padding-bottom-30 h1-text-size">ANGELIQUE & KEEGAN</h1>
+        <h3 class="salsabilla padding-bottom-15 h3-text-size">are getting married</h3>
+        <h4 class="salsabilla padding-bottom-15 h4-text-size">May 26th, 2017</h4>
+        <span class="span-text-size">HONOLULU, HAWAII</span>
+      </div>
+      <div id="player" class="center video-div embed-responsive embed-responsive-16by9">
+        <video id="recap-video" class="embed-responsive-item" src="{{videoSrc}}" width="720px" height="576" preload="true"></video>
+      </div>
+     </div>
   </div>
 </div>
+
+<script>
+  setTimeout(function() {
+    document.getElementById("recap-video").play();
+    document.getElementById("player").classList.add("fade-in");
+    document.getElementById("cover-div").classList.add("fade-out");
+  }, 3000);
+</script>

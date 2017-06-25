@@ -312,6 +312,32 @@ hr {
   color: #e07a92;
 }
 
+.video-parent {
+  position: relative;
+  height: 400px;
+  vertical-align: top;
+}
+
+.video-div {
+  opacity: 0;
+  margin-top: -350px;
+}
+
+
+.embed-responsive .embed-responsive-item, .embed-responsive video {
+  height: 75%;
+}
+
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 4s linear;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 2s linear;
+}
 
 
 
@@ -411,6 +437,12 @@ hr {
     padding-left: 15px;
   }
 
+}
+
+@media (max-width: 768px) {
+  .video-div {
+    margin-top: -200px;
+  }
 }
 
 @media (min-width: 992px) {
